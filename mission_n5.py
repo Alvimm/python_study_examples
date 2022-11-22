@@ -39,8 +39,8 @@ for i in range(quantity_of_names_and_numbers):
     i += 1
 
 text = " ".join(text for text in word_numbers)
-word_cloud = WordCloud(background_color='black',
-                       width=800, height=400).generate(text)
+word_cloud = WordCloud().generate(text)
 plt.imshow(word_cloud, interpolation='bilinear')
 plt.axis('off')
-word_cloud.to_file('words_cloud_image.png')
+plt.show()
+# word_cloud.to_file('words_cloud_image.png')
